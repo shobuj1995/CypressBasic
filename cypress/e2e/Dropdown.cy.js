@@ -32,6 +32,8 @@ describe("Handle Dropdown",()=>{
       it("Dynamic dropdown",()=>{
         cy.visit("https://www.google.com/")
         cy.get('.gLFyf').type("Bangladesh")
+        cy.wait(300)
+
         // cy.get(':nth-child(2) > .eIPGRd > .pcTkSc > .wM6W7d > span').contains("বাংলাদেশ প্রতিদিন").click()
         // cy.get(".suggestion-title").contains("Premier League").click()
         cy.get("div.wM6W7d>span").should('have.length',11)
